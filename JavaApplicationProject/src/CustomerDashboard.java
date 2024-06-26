@@ -1,3 +1,7 @@
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -11,24 +15,22 @@ public class CustomerDashboard extends javax.swing.JFrame {
 
     private int userId;
 
-   public CustomerDashboard(int userId) {
-    initComponents();  // Initialize all components first
-    this.userId = userId;
-    displayUserInfo(); // Update components with user info
-}
-
+    public CustomerDashboard(int userId) {
+        initComponents();  // Initialize all components first
+        this.userId = userId;
+        displayUserInfo(); // Update components with user info
+    }
 
     private CustomerDashboard() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     private void displayUserInfo() {
-    System.out.println("Logged in user ID: " + userId);
-    idjLabel2.setText("Id is " + userId);
-    idjLabel2.revalidate();
-    idjLabel2.repaint();
-}
-
+        System.out.println("Logged in user ID: " + userId);
+        idjLabel2.setText("Id is " + userId);
+        idjLabel2.revalidate();
+        idjLabel2.repaint();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -66,6 +68,11 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(133, 141));
 
         jButton2.setText("Click");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Place Your Order");
@@ -97,6 +104,11 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton3.setText("Click");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Show Your Order");
@@ -238,6 +250,23 @@ public class CustomerDashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        CustomerOrderForm customerOrderForm = new CustomerOrderForm(userId);
+        customerOrderForm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        CustomerOrderViewForm customerOrderViewForm = null;
+        try {
+            customerOrderViewForm = new CustomerOrderViewForm(userId);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CustomerDashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        customerOrderViewForm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/LoginForm.java</file>
+            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/EditInventoryItemForm.java</file>
+            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/AddInventoryItemForm.java</file>
             <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/ManagerDashboard.java</file>
-            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/CustomerDashboard.java</file>
-            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/RegistationForm.java</file>
-            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/DatabaseConnection.java</file>
+            <file>file:/D:/Program%20Project/$/Java%20Swing/ship_shape_net/JavaApplicationProject/src/InventoryManagementForm.java</file>
         </group>
     </open-files>
 </project-private>

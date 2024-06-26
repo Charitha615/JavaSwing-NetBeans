@@ -53,6 +53,10 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel3.setText("Password");
 
+        PasswordTextField1.setText("111");
+
+        NameTextField.setText("nn");
+
         LoginButton.setText("Login");
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
