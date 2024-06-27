@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
@@ -6,7 +5,7 @@ import java.awt.event.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class StatusEditDialog extends JDialog {
+public class StatusEditDialog extends JDialog {
 
     private final int orderId;
     private boolean saved = false;
@@ -87,6 +86,11 @@ class StatusEditDialog extends JDialog {
             int affectedRows = pstmt.executeUpdate();
             if (affectedRows > 0) {
                 JOptionPane.showMessageDialog(this, "Order updated successfully!");
+
+                // Show OrderStatusDialog
+                OrderStatusDialog dialog = new OrderStatusDialog(SwingUtilities.getWindowAncestor(this), status, totalPrice);
+                dialog.setVisible(true);
+
                 saved = true;
                 dispose();
             } else {

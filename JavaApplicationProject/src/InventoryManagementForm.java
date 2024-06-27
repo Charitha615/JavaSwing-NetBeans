@@ -31,13 +31,23 @@ public class InventoryManagementForm extends JFrame {
         JButton addButton = new JButton("Add");
         JButton editButton = new JButton("Edit");
         JButton deleteButton = new JButton("Delete");
+        JButton closeButton = new JButton("Close");
+        
         buttonPanel.add(addButton);
         buttonPanel.add(editButton);
         buttonPanel.add(deleteButton);
+         buttonPanel.add(closeButton);
         add(buttonPanel, BorderLayout.SOUTH);
 
         // Load inventory data
         loadInventoryData();
+        
+        closeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
 
         // Add action listeners for buttons
         addButton.addActionListener(new ActionListener() {

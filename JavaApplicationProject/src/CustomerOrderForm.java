@@ -42,6 +42,7 @@ public class CustomerOrderForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -52,12 +53,16 @@ public class CustomerOrderForm extends javax.swing.JFrame {
         ItemDesTextField = new javax.swing.JTextField();
         ItemQuajSpinner1 = new javax.swing.JSpinner();
         categoryjComboBox1 = new javax.swing.JComboBox<>();
+        orderDatejLabel9 = new javax.swing.JLabel();
+        ItemNameTextField1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         SpicalNoteTextField = new javax.swing.JTextField();
         PlaceOrderjButton1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         BackjButton1 = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,31 +81,41 @@ public class CustomerOrderForm extends javax.swing.JFrame {
 
         categoryjComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ship_Repair_Services", "Marine_Spare_Parts", "Ship_Repainting_Services", "Additional_Services" }));
 
+        orderDatejLabel9.setText("Order Date");
+
+        ItemNameTextField1.setText("YYYY-MM-DD");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(44, 44, 44)
-                        .addComponent(ItemNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(28, 28, 28)
-                        .addComponent(categoryjComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4))
-                        .addGap(16, 16, 16)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ItemDesTextField)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(ItemQuajSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addComponent(jLabel2)
+                                .addGap(44, 44, 44)
+                                .addComponent(ItemNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(28, 28, 28)
+                                .addComponent(categoryjComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel4))
+                                .addGap(16, 16, 16)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ItemDesTextField)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(ItemQuajSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(orderDatejLabel9)
+                        .addGap(52, 52, 52)
+                        .addComponent(ItemNameTextField1)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -118,7 +133,11 @@ public class CustomerOrderForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(ItemDesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orderDatejLabel9)
+                    .addComponent(ItemNameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(ItemQuajSpinner1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -196,7 +215,7 @@ public class CustomerOrderForm extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(SpicalNoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -261,6 +280,7 @@ public class CustomerOrderForm extends javax.swing.JFrame {
     private javax.swing.JButton BackjButton1;
     private javax.swing.JTextField ItemDesTextField;
     private javax.swing.JTextField ItemNameTextField;
+    private javax.swing.JTextField ItemNameTextField1;
     private javax.swing.JSpinner ItemQuajSpinner1;
     private javax.swing.JButton PlaceOrderjButton1;
     private javax.swing.JTextField SpicalNoteTextField;
@@ -274,6 +294,8 @@ public class CustomerOrderForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel orderDatejLabel9;
     // End of variables declaration//GEN-END:variables
     private void submitCustomerOrderButtonActionPerformed(java.awt.event.ActionEvent evt) throws ClassNotFoundException {
         // Retrieve data from the form
@@ -283,12 +305,13 @@ public class CustomerOrderForm extends javax.swing.JFrame {
         String itemDescription = ItemDesTextField.getText();
         int itemQuantity = (Integer) ItemQuajSpinner1.getValue();
         String specialNote = SpicalNoteTextField.getText();
+        String orderDate = ItemNameTextField1.getText();
 
         if (!validateInputs(itemName, itemCategory, itemQuantity)) {
             return; // Stop further processing if validation fails
         }
         // SQL INSERT statement
-        String sql = "INSERT INTO customerorders (user_id, item_name, item_category, item_description, item_quantity, special_note, status) VALUES (?, ?, ?, ?, ?, ?,?)";
+        String sql = "INSERT INTO customerorders (user_id, item_name, item_category, item_description, item_quantity, special_note, status,orderDate) VALUES (?, ?, ?, ?, ?, ?,?,?)";
 
         // Connection and PreparedStatement within a try-with-resources statement
         try (Connection conn = DatabaseConnection.getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -301,6 +324,7 @@ public class CustomerOrderForm extends javax.swing.JFrame {
             pstmt.setInt(5, itemQuantity);
             pstmt.setString(6, specialNote);
             pstmt.setString(7, "reviewing");
+            pstmt.setString(8, orderDate);
 
             // Execute the update
             int affectedRows = pstmt.executeUpdate();
@@ -313,6 +337,7 @@ public class CustomerOrderForm extends javax.swing.JFrame {
                 ItemDesTextField.setText("");
                 ItemQuajSpinner1.setValue(0);  // Assuming 0 is the default value
                 SpicalNoteTextField.setText("");
+                ItemNameTextField1.setText("");
             } else {
                 JOptionPane.showMessageDialog(this, "Failed to place the order.");
             }

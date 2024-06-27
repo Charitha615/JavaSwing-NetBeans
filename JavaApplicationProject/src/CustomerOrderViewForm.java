@@ -156,7 +156,7 @@ public class CustomerOrderViewForm extends javax.swing.JFrame {
 
     private void initializeUI() throws ClassNotFoundException {
         // Create the table model and table
-        tableModel = new DefaultTableModel(new String[]{"Order ID", "Item Name", "Category", "Quantity", "Special Note","Total", "Status"}, 0);
+        tableModel = new DefaultTableModel(new String[]{"Order ID", "Item Name", "Category", "Quantity", "Special Note","Total", "Status","Order Date"}, 0);
         ordersTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(ordersTable);
         add(scrollPane, BorderLayout.CENTER);  // Ensures the table is central
@@ -201,12 +201,12 @@ public class CustomerOrderViewForm extends javax.swing.JFrame {
     }
 
     private void loadOrders() throws ClassNotFoundException {
-        String query = "SELECT order_id, item_name, item_category, item_quantity, special_note, total_price,status FROM customerorders WHERE user_id = ?";
+        String query = "SELECT order_id, item_name, item_category, item_quantity, special_note, total_price,status,orderDate FROM customerorders WHERE user_id = ?";
         try (Connection conn = DatabaseConnection.getConnection(); PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setInt(1, userId);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                tableModel.addRow(new Object[]{rs.getInt("order_id"), rs.getString("item_name"), rs.getString("item_category"), rs.getInt("item_quantity"), rs.getString("special_note"),rs.getInt("total_price"), rs.getString("status")});
+                tableModel.addRow(new Object[]{rs.getInt("order_id"), rs.getString("item_name"), rs.getString("item_category"), rs.getInt("item_quantity"), rs.getString("special_note"),rs.getInt("total_price"), rs.getString("status"), rs.getString("orderDate")});
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Error loading orders: " + ex.getMessage());
